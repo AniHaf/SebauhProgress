@@ -1,0 +1,28 @@
+/* Add all your original image files to /images/ on GitHub. The site tries .jpeg, .jpg, .png, .webp when no extension was supplied. */
+const photoData={
+ church:[
+ ...['PecahTanah.jpeg','PecahTanah2.jpeg','PecahTanah3.jpeg','PecahTanah4.jpeg','PecahTanah5.jpeg','PecahTanah6.jpeg'].map((name,i)=>({name,category:'ceremony',label:`Groundbreaking & blessing · Photo ${i+1}`})),
+ ...['Church.jpeg','Church2.jpeg','Church3.jpeg','Church4.jpeg','Church5.jpeg','Church6.jpeg'].map((name,i)=>({name,category:'ceremony',label:`Official ceremony · Photo ${i+1}`})),
+ ...['ChurchProgress','ChurchProgress2','ChurchProgress3','ChurchProgress4'].map((name,i)=>({name,category:'progress',label:`Construction progress · Photo ${i+1} · 29 Sep 2026`}))
+ ],
+ masjid:[
+ ...['Masjid.jpg','Masjid2.jpg','Masjid3.jpg'].map((name,i)=>({name,category:'visit',label:`Site visit · Photo ${i+1} · 3 Mar 2026`})),
+ ...['MasjidProgress','MasjidProgress2','MasjidProgress3'].map((name,i)=>({name,category:'progress',label:`Construction progress · Photo ${i+1} · 4 Nov 2026`}))
+ ],
+ mrp:['MRP.jpg','MRP2.jpg','MRP3.jpg','MRP4.jpg'].map((name,i)=>({name,category:'mrp',label:`Community presentation · Photo ${i+1} · 25 Jun 2026`}))
+};
+const extList=['.jpeg','.jpg','.png','.webp','.JPEG','.JPG','.PNG','.WEBP'];
+function candidates(name){if(/\.(jpeg|jpg|png|webp)$/i.test(name))return [`images/${name}`];return extList.map(ext=>`images/${name}${ext}`)}
+function loadImage(img,name,onMissing){let paths=candidates(name),idx=0;img.onerror=()=>{idx++;if(idx<paths.length){img.src=encodeURI(paths[idx]);return}img.onerror=null;onMissing?.()};img.src=encodeURI(paths[0])}
+let activePhotos=[],activeIndex=0;
+function openPhoto(group,index){activePhotos=photoData[group].filter(p=>!p._missing);activeIndex=activePhotos.findIndex(p=>p.name===photoData[group][index].name);if(activeIndex<0)return;document.getElementById('lightbox').classList.add('open');document.getElementById('lightbox').setAttribute('aria-hidden','false');document.body.style.overflow='hidden';showPhoto()}
+function showPhoto(){let p=activePhotos[activeIndex];if(!p)return;const im=document.getElementById('lbImg');loadImage(im,p.name,()=>{});im.alt=p.label;document.getElementById('lbTitle').textContent=p.label;document.getElementById('lbCount').textContent=`${activeIndex+1} / ${activePhotos.length}`}
+function movePhoto(delta){if(!activePhotos.length)return;activeIndex=(activeIndex+delta+activePhotos.length)%activePhotos.length;showPhoto()}
+function closePhoto(){document.getElementById('lightbox').classList.remove('open');document.getElementById('lightbox').setAttribute('aria-hidden','true');document.body.style.overflow=''}
+for(let group of Object.keys(photoData)){const gallery=document.getElementById(`gallery-${group}`);photoData[group].forEach((p,i)=>{const btn=document.createElement('button');btn.className='photo';btn.type='button';btn.dataset.category=p.category;btn.setAttribute('aria-label',`View ${p.label}`);const fig=document.createElement('figure');const img=document.createElement('img');img.loading='lazy';img.alt=p.label;loadImage(img,p.name,()=>{p._missing=true;img.replaceWith(Object.assign(document.createElement('div'),{className:'missing',textContent:`Upload ${p.name} to the images folder`}))});const cap=document.createElement('figcaption');cap.textContent=p.label;fig.append(img,cap);btn.append(fig);btn.onclick=()=>openPhoto(group,i);gallery.append(btn)})}
+document.querySelectorAll('.filters').forEach(bar=>bar.addEventListener('click',e=>{const b=e.target.closest('button[data-filter]');if(!b)return;bar.querySelectorAll('button').forEach(x=>x.classList.toggle('active',x===b));const group=bar.dataset.gallery;document.querySelectorAll(`#gallery-${group} .photo`).forEach(x=>x.hidden=b.dataset.filter!=='all'&&x.dataset.category!==b.dataset.filter)}));
+document.getElementById('lbClose').onclick=closePhoto;document.getElementById('lbPrev').onclick=()=>movePhoto(-1);document.getElementById('lbNext').onclick=()=>movePhoto(1);document.getElementById('lightbox').addEventListener('click',e=>{if(e.target.id==='lightbox')closePhoto()});document.addEventListener('keydown',e=>{if(e.key==='Escape')closePhoto();if(document.getElementById('lightbox').classList.contains('open')){if(e.key==='ArrowLeft')movePhoto(-1);if(e.key==='ArrowRight')movePhoto(1)}});
+document.getElementById('present').onclick=()=>{document.body.classList.toggle('presentation');if(!document.fullscreenElement)document.documentElement.requestFullscreen?.().catch(()=>{});else document.exitFullscreen?.()};document.getElementById('menu').onclick=()=>document.querySelector('.nav nav').classList.toggle('open');document.querySelectorAll('.nav nav a').forEach(a=>a.addEventListener('click',()=>document.querySelector('.nav nav').classList.remove('open')));
+// Use a real uploaded project photo for the cover, without external stock imagery.
+const hero=document.getElementById('heroImage');const heroImg=new Image();loadImage(heroImg,'ChurchProgress',()=>{const fallback=new Image();loadImage(fallback,'MasjidProgress',()=>{});fallback.onload=()=>hero.style.backgroundImage=`linear-gradient(90deg,#eff6ff 2%,#eff6ffe8 38%,#eff6ff90 70%,#eff6ff65),url("${fallback.src}")`});heroImg.onload=()=>hero.style.backgroundImage=`linear-gradient(90deg,#eff6ff 2%,#eff6ffe8 38%,#eff6ff90 70%,#eff6ff65),url("${heroImg.src}")`;
+for(const [group,file] of [['church','ChurchProgress'],['masjid','MasjidProgress'],['mrp','MRP.jpg']]){const el=document.querySelector(`[data-preview="${group}"]`);const img=new Image();loadImage(img,file,()=>{});img.onload=()=>el.style.backgroundImage=`url("${img.src}")`}
