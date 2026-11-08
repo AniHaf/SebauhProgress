@@ -1,111 +1,153 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#2457A6">
-  <meta name="description" content="Sebauh development and community project updates.">
-  <title>Sebauh Progress | Development & Community Updates</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Project progress and development updates in Sebauh, Bintulu, Sarawak.">
+  <title>Sebauh Progress | Development Updates</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header class="site-header">
-  <a class="brand" href="#home" aria-label="Sebauh Progress home">
-    <span class="brand-mark">S</span>
-    <span class="brand-copy">SEBAUH <b>PROGRESS</b><small>Development &amp; Community Updates</small></span>
-  </a>
-  <nav class="main-nav" aria-label="Main navigation">
-    <a href="#overview">Overview</a><a href="#church">Church</a><a href="#mosque">Mosque</a><a href="#mrp">MRP</a><a href="#facebook">Facebook Updates</a>
-  </nav>
-  <button class="present-btn" id="present" type="button">⛶ <span>Present</span></button>
-  <button class="menu-btn" id="menu" type="button" aria-label="Open navigation">☰</button>
-</header>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="Sebauh Progress home">
+      <span class="brand-mark">SP</span>
+      <span><strong>SEBAUH</strong><small>PROJECT PROGRESS</small></span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open navigation">☰</button>
+    <nav id="mainNav">
+      <a href="#mrp">MRP</a>
+      <a href="#church">Church</a>
+      <a href="#mosque">Mosque</a>
+      <a href="#waterfront">Waterfront</a>
+      <a href="#upcoming">Upcoming</a>
+      <a href="#updates">Facebook</a>
+    </nav>
+  </header>
 
-<main id="home">
-  <section class="hero">
-    <div class="hero-photo" id="heroImage"></div>
-    <div class="hero-shade"></div>
-    <div class="wrap hero-content">
-      <div class="eyebrow"><span></span> SEBAUH · BINTULU · SARAWAK</div>
-      <h1>SEBAUH<br><span>PROGRESS</span></h1>
-      <p>A visual update on local development projects, construction milestones and community initiatives.</p>
-      <div class="hero-actions"><a class="button button-primary" href="#overview">Explore the progress <span>↗</span></a><a class="button button-light" href="#facebook">Latest updates ↓</a></div>
-    </div>
-    <div class="hero-foot"><span>PROJECT DEVELOPMENT SHOWCASE</span><b>2025 — 2026</b></div>
-  </section>
-
-  <section class="section wrap" id="overview">
-    <div class="section-heading"><div><div class="eyebrow blue">AT A GLANCE</div><h2>Development highlights</h2><p>A snapshot of three initiatives supporting Sebauh and the wider Kemena community.</p></div></div>
-    <div class="stats">
-      <article class="stat"><strong>03</strong><span>Featured initiatives</span></article>
-      <article class="stat"><strong>02</strong><span>Construction projects</span></article>
-      <article class="stat"><strong>43</strong><span>MRP recipients across Kemena</span></article>
-    </div>
-    <div class="project-grid">
-      <a class="project-card" href="#church"><div class="project-image" data-preview="church"></div><div class="project-body"><span class="card-kicker">01 · CONSTRUCTION</span><h3>St. George Church, Sebauh</h3><p>Groundbreaking, blessing ceremony and construction progress.</p><span class="card-link">Explore project ↗</span></div></a>
-      <a class="project-card" href="#mosque"><div class="project-image" data-preview="mosque"></div><div class="project-body"><span class="card-kicker">02 · CONSTRUCTION</span><h3>New Sebauh Mosque</h3><p>Site visit and latest construction progress.</p><span class="card-link">Explore project ↗</span></div></a>
-      <a class="project-card" href="#mrp"><div class="project-image" data-preview="mrp"></div><div class="project-body"><span class="card-kicker">03 · COMMUNITY</span><h3>MRP Community Initiative</h3><p>Support for community and grassroots development in Kemena.</p><span class="card-link">Explore initiative ↗</span></div></a>
-    </div>
-  </section>
-
-  <section class="project-section" id="church">
-    <div class="wrap">
-      <div class="project-heading"><div><div class="eyebrow blue">PROJECT 01 · CONSTRUCTION</div><h2>St. George Church, <span>Sebauh</span></h2><p>Roman Catholic Church on Lot 969, Block 8, Selezu Land District, Sebauh, Bintulu, Sarawak.</p></div><div class="progress-summary"><strong>79.59%</strong><span>Physical progress<br>As at 29 September 2026</span></div></div>
-      <div class="progress-bar"><span style="width:79.59%"></span></div>
-      <div class="milestones">
-        <article><small>06 SEPTEMBER 2025</small><b>Groundbreaking &amp; blessing</b><span>Project commencement ceremony at the site</span></article>
-        <article><small>29 SEPTEMBER 2026</small><b>Construction update</b><span>Progress across the main building and supporting facilities</span></article>
+  <main id="home">
+    <section class="hero">
+      <div class="hero-copy">
+        <span class="eyebrow"><span class="live-dot"></span> COMMUNITY DEVELOPMENT • SEBAUH, BINTULU</span>
+        <h1>Building progress.<br><em>Growing Sebauh.</em></h1>
+        <p>A central place to follow local development projects, construction milestones and community updates in Sebauh.</p>
+        <a class="primary-link" href="#mrp">Explore project updates <span>↓</span></a>
       </div>
-      <div class="gallery-heading"><div><h3>Project photo journey</h3><p>Browse the ceremony and construction photographs.</p></div><div class="filters" data-gallery="church"><button class="active" data-filter="all">All photos</button><button data-filter="ceremony">Ceremony</button><button data-filter="progress">Construction</button></div></div>
-      <div class="gallery" id="gallery-church"></div>
-    </div>
-  </section>
-
-  <section class="project-section section-tint" id="mosque">
-    <div class="wrap">
-      <div class="project-heading"><div><div class="eyebrow blue">PROJECT 02 · CONSTRUCTION</div><h2>New Sebauh <span>Mosque</span></h2><p>Located on part of Lot 846, Block 8, Selezu Land District, Sebauh Town, Bintulu, Sarawak.</p></div><div class="date-summary"><strong>04 NOV 2026</strong><span>Latest photo update</span></div></div>
-      <div class="milestones">
-        <article><small>03 MARCH 2026</small><b>Site visit</b><span>Project site inspection and coordination</span></article>
-        <article><small>04 NOVEMBER 2026</small><b>Construction progress</b><span>Latest site photographs</span></article>
+      <div class="hero-visual">
+        <img src="images/Waterfront.JPG" alt="Sebauh Waterfront" onerror="this.style.display='none'">
+        <div class="hero-caption"><span>SEBAUH</span><strong>Development in progress</strong></div>
       </div>
-      <div class="gallery-heading"><div><h3>Project photo journey</h3><p>Site visit and construction progress photographs.</p></div><div class="filters" data-gallery="mosque"><button class="active" data-filter="all">All photos</button><button data-filter="visit">Site visit</button><button data-filter="progress">Construction</button></div></div>
-      <div class="gallery" id="gallery-mosque"></div>
-    </div>
-  </section>
+      <div class="hero-bottom"><span>PROJECT INFORMATION & PHOTO UPDATES</span><span>01 — 06</span></div>
+    </section>
 
-  <section class="project-section" id="mrp">
-    <div class="wrap">
-      <div class="project-heading"><div><div class="eyebrow blue">PROJECT 03 · COMMUNITY DEVELOPMENT</div><h2>MRP Community <span>Initiative</span></h2><p>Community development support reaching recipients across the Kemena constituency, including Sebauh and surrounding areas.</p></div><div class="date-summary"><strong>26 JUN 2026</strong><span>Community presentation</span></div></div>
-      <div class="milestones single"><article><small>26 JUNE 2026</small><b>MRP Phase Two presentation</b><span>43 recipients supported to carry out social and community development programmes across Kemena</span></article></div>
-      <div class="gallery-heading"><div><h3>Community highlights</h3><p>Photographs from the MRP community presentation.</p></div></div>
-      <div class="gallery" id="gallery-mrp"></div>
-    </div>
-  </section>
+    <section class="intro-strip">
+      <div><span class="eyebrow">PROJECT PORTAL</span><h2>Updates that keep the community informed.</h2></div>
+      <p>Browse each project by date, view site photographs and access supporting project documents.</p>
+    </section>
 
-  <section class="facebook-section" id="facebook">
-    <div class="wrap">
-      <div class="section-heading"><div><div class="eyebrow blue">FOLLOW THE DEVELOPMENTS</div><h2>Facebook &amp; news updates</h2><p>Open the original posts and news coverage for more information.</p></div></div>
-      <div class="updates-grid">
-        <a class="update-card" href="https://www.facebook.com/share/p/1CBHJZBdgS/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer"><span class="update-icon">f</span><span class="update-type">FACEBOOK · CHURCH</span><h3>St. George Church groundbreaking &amp; blessing</h3><p>06 September 2025 · 10.00 am · Project site</p><span class="update-link">View Facebook post ↗</span></a>
-        <a class="update-card" href="https://www.facebook.com/share/p/1CJZbCW1kc/" target="_blank" rel="noopener noreferrer"><span class="update-icon">f</span><span class="update-type">FACEBOOK · MOSQUE</span><h3>New Sebauh Mosque project update</h3><p>Site visit · 03 March 2026</p><span class="update-link">View Facebook post ↗</span></a>
-        <a class="update-card" href="https://www.facebook.com/share/p/1FBjL8mnQJ/" target="_blank" rel="noopener noreferrer"><span class="update-icon">f</span><span class="update-type">FACEBOOK · COMMUNITY</span><h3>MRP community allocation update</h3><p>43 recipients across the Kemena constituency</p><span class="update-link">View Facebook post ↗</span></a>
-        <a class="update-card news-card" href="https://ukas.sarawak.gov.my/web/subpage/news_view/43306" target="_blank" rel="noopener noreferrer"><span class="update-icon">↗</span><span class="update-type">UKAS · NEWS COVERAGE</span><h3>MRP allocation benefits 43 recipients in Kemena</h3><p>News coverage of the community allocation initiative.</p><span class="update-link">Read UKAS article ↗</span></a>
+    <section class="project-section" id="mrp">
+      <div class="section-heading"><div><span class="section-number">01 / COMMUNITY GRANT</span><h2>Minor Rural Project <span>(MRP)</span></h2></div><span class="section-tag">COMMUNITY DEVELOPMENT</span></div>
+      <p class="project-description">The Minor Rural Project (MRP) is an ongoing Sarawak Government grant initiative that supports community development in Sebauh and the wider Kemena constituency. Grants are channelled to village and longhouse committees, NGOs, youth associations, schools and places of worship. The funding supports social programmes, community activities and small-scale improvements to local facilities. Allocations are distributed in phases throughout the year.</p>
+      <div class="timeline">
+        <article class="timeline-item"><div class="timeline-date">26 JUNE 2026</div><div class="timeline-content"><h3>MRP Phase Two allocation</h3><p>Community recipients in the Kemena constituency received MRP Phase Two allocations to support local programmes and community needs.</p><div class="photo-grid four">
+          <img src="images/MRP.jpg" alt="MRP update photo 1" onclick="openLightbox(this)">
+          <img src="images/MRP2.jpg" alt="MRP update photo 2" onclick="openLightbox(this)">
+          <img src="images/MRP3.jpg" alt="MRP update photo 3" onclick="openLightbox(this)">
+          <img src="images/MRP4.jpg" alt="MRP update photo 4" onclick="openLightbox(this)">
+        </div></div></article>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="closing"><div class="wrap"><div class="eyebrow blue">LOOKING AHEAD</div><h2>Progress through action.<br><span>Development for the community.</span></h2><p>SEBAUH PROGRESS · Project development showcase</p><a class="button button-primary" href="#home">Back to top ↑</a></div></section>
-</main>
-<footer><span>© 2026 Sebauh Progress</span><span>Project showcase · Information based on supplied project updates</span></footer>
+    <section class="project-section soft-section" id="church">
+      <div class="section-heading"><div><span class="section-number">02 / PLACE OF WORSHIP</span><h2>St. George Church <span>Sebauh</span></h2></div><span class="section-tag">CONSTRUCTION</span></div>
+      <p class="project-description">St. George Church is a development project located at Lot 969, Block 8, Selezu Land District, Sebauh, Bintulu. The project includes the main church building, priest residence, catechist house and supporting facilities. Construction updates cover building works and external infrastructure. The project gallery records key milestones through dated photographs.</p>
+      <div class="timeline">
+        <article class="timeline-item"><div class="timeline-date">6 SEPTEMBER 2025</div><div class="timeline-content"><h3>Groundbreaking and blessing ceremony</h3><p>The project commenced with a groundbreaking and blessing ceremony at the project site.</p><div class="photo-grid three">
+          <img src="images/PecahTanah.jpeg" alt="Church groundbreaking 1" onclick="openLightbox(this)">
+          <img src="images/PecahTanah2.jpeg" alt="Church groundbreaking 2" onclick="openLightbox(this)">
+          <img src="images/PecahTanah3.jpeg" alt="Church groundbreaking 3" onclick="openLightbox(this)">
+          <img src="images/PecahTanah4.jpeg" alt="Church groundbreaking 4" onclick="openLightbox(this)">
+          <img src="images/PecahTanah5.jpeg" alt="Church groundbreaking 5" onclick="openLightbox(this)">
+          <img src="images/PecahTanah6.jpeg" alt="Church groundbreaking 6" onclick="openLightbox(this)">
+        </div></div></article>
+        <article class="timeline-item"><div class="timeline-date">29 SEPTEMBER 2026</div><div class="timeline-content"><h3>Construction progress update</h3><p>The progress photo report records works to the main church, priest residence, catechist house and supporting facilities, including internal finishes and external infrastructure.</p><div class="photo-grid four">
+          <img src="images/ChurchProgress.png" alt="Church progress 1" onclick="openLightbox(this)">
+          <img src="images/ChurchProgress2.png" alt="Church progress 2" onclick="openLightbox(this)">
+          <img src="images/ChurchProgress3.png" alt="Church progress 3" onclick="openLightbox(this)">
+          <img src="images/ChurchProgress4.png" alt="Church progress 4" onclick="openLightbox(this)">
+        </div></div></article>
+        <article class="timeline-item"><div class="timeline-date">PHOTO GALLERY</div><div class="timeline-content"><h3>Church project photographs</h3><div class="photo-grid three">
+          <img src="images/Church.jpeg" alt="Church photo 1" onclick="openLightbox(this)">
+          <img src="images/Church2.jpeg" alt="Church photo 2" onclick="openLightbox(this)">
+          <img src="images/Church3.jpeg" alt="Church photo 3" onclick="openLightbox(this)">
+          <img src="images/Church4.jpeg" alt="Church photo 4" onclick="openLightbox(this)">
+          <img src="images/Church5.jpeg" alt="Church photo 5" onclick="openLightbox(this)">
+          <img src="images/Church6.jpeg" alt="Church photo 6" onclick="openLightbox(this)">
+        </div></div></article>
+      </div>
+    </section>
 
-<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer" aria-hidden="true">
-  <button class="lb-close" id="lbClose" aria-label="Close">×</button><button class="lb-prev" id="lbPrev" aria-label="Previous photo">‹</button>
-  <div class="lb-center"><img id="lbImg" alt=""><div class="lb-caption"><strong id="lbTitle"></strong><span id="lbCount"></span></div></div>
-  <button class="lb-next" id="lbNext" aria-label="Next photo">›</button>
-</div>
-<script src="script.js"></script>
+    <section class="project-section" id="mosque">
+      <div class="section-heading"><div><span class="section-number">03 / PLACE OF WORSHIP</span><h2>New Sebauh Mosque</h2></div><span class="section-tag">CONSTRUCTION</span></div>
+      <p class="project-description">The New Sebauh Mosque is a development project located on part of Lot 846, Block 8, Selezu Land District, Sebauh Town, Bintulu. It is intended to provide a place of worship and community gathering for local residents. The project’s development is documented through site visits, construction milestones and photographs.</p>
+      <div class="timeline">
+        <article class="timeline-item"><div class="timeline-date">3 MARCH 2026</div><div class="timeline-content"><h3>Project site visit</h3><p>A site visit was conducted to review the project location and development progress.</p><div class="photo-grid three">
+          <img src="images/Masjid.jpg" alt="Mosque site visit 1" onclick="openLightbox(this)">
+          <img src="images/Masjid2.jpg" alt="Mosque site visit 2" onclick="openLightbox(this)">
+          <img src="images/Masjid3.jpg" alt="Mosque site visit 3" onclick="openLightbox(this)">
+        </div></div></article>
+        <article class="timeline-item"><div class="timeline-date">4 NOVEMBER 2026</div><div class="timeline-content"><h3>Latest progress update</h3><p>Latest photographs documenting the ongoing development of the new mosque.</p><div class="photo-grid three">
+          <img src="images/MasjidProgress.png" alt="Mosque progress 1" onclick="openLightbox(this)">
+          <img src="images/MasjidProgress2.png" alt="Mosque progress 2" onclick="openLightbox(this)">
+          <img src="images/MasjidProgress3.png" alt="Mosque progress 3" onclick="openLightbox(this)">
+        </div></div></article>
+      </div>
+    </section>
+
+    <section class="project-section soft-section" id="waterfront">
+      <div class="section-heading"><div><span class="section-number">04 / PUBLIC AMENITY</span><h2>Sebauh Waterfront</h2></div><span class="section-tag">PROPOSED UPGRADING</span></div>
+      <p class="project-description">The Proposed Upgrading of Sebauh Waterfront is a development initiative aimed at improving the functionality and appearance of the town’s riverside area. The project is planned to enhance public spaces and provide greater capacity for community activities and public events. The proposed works are intended to create a more modern, inclusive and sustainable waterfront attraction. The contract is scheduled to commence in the fourth quarter of 2026.</p>
+      <div class="waterfront-facts">
+        <div><span>PROJECT</span><strong>Proposed Upgrading of Sebauh Waterfront</strong></div>
+        <div><span>CONTRACT START</span><strong>Q4 2026</strong></div>
+        <div><span>PROJECT REFERENCE</span><strong>P013-420108026</strong></div>
+      </div>
+      <div class="photo-grid four waterfront-gallery">
+        <img src="images/Waterfront.JPG" alt="Sebauh Waterfront concept 1" onclick="openLightbox(this)">
+        <img src="images/Waterfront2.JPG" alt="Sebauh Waterfront concept 2" onclick="openLightbox(this)">
+        <img src="images/Waterfront3.JPG" alt="Sebauh Waterfront concept 3" onclick="openLightbox(this)">
+        <img src="images/Waterfront4.JPG" alt="Sebauh Waterfront concept 4" onclick="openLightbox(this)">
+      </div>
+      <p class="source-note">Project information and concept images: Proposed Upgrading of Sebauh Waterfront presentation.</p>
+    </section>
+
+    <section class="project-section" id="upcoming">
+      <div class="section-heading"><div><span class="section-number">05 / PLANNING & DEVELOPMENT</span><h2>Upcoming Projects</h2></div><span class="section-tag">PROJECT DOCUMENTS</span></div>
+      <p class="project-description">Explore the project panels and supporting information for proposed, planned and ongoing infrastructure development in Sebauh and the surrounding Bintulu Division.</p>
+      <div class="document-list">
+        <a class="document-card" href="documents/Sebauh-Infrastructure-Projects-Panel-1.pdf" target="_blank" rel="noopener"><span class="doc-icon">PDF</span><span><strong>Sebauh Overall Infrastructure Projects</strong><small>Construction and design projects, including road access and bridge works.</small></span><b>↗</b></a>
+        <a class="document-card" href="documents/Sebauh-Infrastructure-Projects-Panel-2.pdf" target="_blank" rel="noopener"><span class="doc-icon">PDF</span><span><strong>Proposed Road, Bridge and Ferry Access Projects</strong><small>Proposed logging road maintenance, bridge, road and ferry ramp projects.</small></span><b>↗</b></a>
+        <a class="document-card" href="documents/Sebauh-Town-Projects-Panel-3.pdf" target="_blank" rel="noopener"><span class="doc-icon">PDF</span><span><strong>Sebauh Town Development Projects</strong><small>School classroom, state government quarters and Sebauh Sports Complex.</small></span><b>↗</b></a>
+        <a class="document-card" href="images/LoggingRoad.png" target="_blank" rel="noopener"><span class="doc-icon image-icon">IMG</span><span><strong>Proposed Maintenance of Logging Roads in Sarawak – Bintulu Division</strong><small>Open the logging road map and project information image.</small></span><b>↗</b></a>
+      </div>
+    </section>
+
+    <section class="facebook-section" id="updates">
+      <div><span class="section-number">06 / SOCIAL MEDIA</span><h2>Facebook Updates</h2><p>Follow the latest announcements, project photographs and community updates through the related Facebook posts.</p></div>
+      <div class="social-links">
+        <a href="https://www.facebook.com/share/p/1FBjL8mnQJ/" target="_blank" rel="noopener"><span>MRP</span><strong>MRP community allocation update</strong><b>View post ↗</b></a>
+        <a href="https://www.facebook.com/share/p/1CBHJZBdgS/?mibextid=wwXIfr" target="_blank" rel="noopener"><span>CHURCH</span><strong>St. George Church Sebauh update</strong><b>View post ↗</b></a>
+        <a href="https://www.facebook.com/share/p/1CJZbCW1kc/" target="_blank" rel="noopener"><span>MOSQUE</span><strong>New Sebauh Mosque update</strong><b>View post ↗</b></a>
+        <a href="https://ukas.sarawak.gov.my/web/subpage/news_view/43306" target="_blank" rel="noopener"><span>NEWS</span><strong>UKAS – MRP community update</strong><b>Read article ↗</b></a>
+      </div>
+    </section>
+  </main>
+
+  <footer><a class="brand footer-brand" href="#home"><span class="brand-mark">SP</span><span><strong>SEBAUH</strong><small>PROJECT PROGRESS</small></span></a><p>Project information and progress updates for Sebauh, Bintulu, Sarawak.</p><span>© 2026 SEBAUH PROGRESS</span></footer>
+
+  <div class="lightbox" id="lightbox" onclick="closeLightbox()"><button aria-label="Close image">×</button><img id="lightboxImage" alt="Enlarged project photograph"></div>
+  <script src="script.js"></script>
 </body>
 </html>
