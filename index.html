@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Project progress and development updates in Sebauh, Bintulu, Sarawak.">
+  <meta name="description" content="Project progress and development updates across the Kemena constituency, Bintulu, Sarawak.">
   <title>Kemena Progress | Development Updates</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -31,13 +31,18 @@
     <section class="hero">
       <div class="hero-copy">
         <span class="eyebrow"><span class="live-dot"></span> COMMUNITY DEVELOPMENT • KEMENA, BINTULU</span>
-        <h1>Building progress.<br><em>Growing Sebauh.</em></h1>
+        <h1>Building progress.<br><em>Growing Kemena.</em></h1>
         <p>A central place to follow development projects, construction milestones and community updates across the Kemena constituency.</p>
         <div class="hero-actions"><a class="primary-link" href="#mrp">Explore project updates <span>↓</span></a><button class="presentation-toggle" id="presentationToggle" type="button">Presentation view ⛶</button></div>
       </div>
-      <div class="hero-visual">
-        <img src="images/Waterfront.JPG" alt="Sebauh Waterfront" onerror="this.style.display='none'">
-        <div class="hero-caption"><span>SEBAUH</span><strong>Development in progress</strong></div>
+      <div class="hero-visual hero-panel" aria-label="Kemena project portfolio overview">
+        <div class="hero-panel-top"><span class="hero-panel-mark">KP</span><span>PROJECT PORTFOLIO</span></div>
+        <div class="hero-panel-main">
+          <span class="hero-panel-kicker">KEMENA CONSTITUENCY</span>
+          <strong>Development<br>in progress.</strong>
+          <p>Project milestones · Site updates · Community information</p>
+        </div>
+        <div class="hero-panel-bottom"><span>MRP</span><span>CHURCH</span><span>MOSQUE</span><span>WATERFRONT</span></div>
       </div>
       <div class="hero-bottom"><span>PROJECT INFORMATION & PHOTO UPDATES</span><span>01 — 06</span></div>
     </section>
@@ -115,7 +120,7 @@
         <div><span>PROJECT REFERENCE</span><strong>P013-420108026</strong></div>
       </div>
       <div class="photo-grid four waterfront-gallery">
-        <img src="images/Waterfront.JPG" alt="Sebauh Waterfront concept 1" onclick="openLightbox(this)">
+        <img src="images/Waterfront.JPG" alt="Kemena Waterfront concept 1" onclick="openLightbox(this)">
         <img src="images/Waterfront2.JPG" alt="Sebauh Waterfront concept 2" onclick="openLightbox(this)">
         <img src="images/Waterfront3.JPG" alt="Sebauh Waterfront concept 3" onclick="openLightbox(this)">
         <img src="images/Waterfront4.JPG" alt="Sebauh Waterfront concept 4" onclick="openLightbox(this)">
@@ -147,7 +152,14 @@
 
   <footer><a class="brand footer-brand" href="#home"><span class="brand-mark">KP</span><span><strong>KEMENA</strong><small>PROJECT PROGRESS</small></span></a><p>Project information and progress updates for Kemena, Bintulu, Sarawak.</p><span>© 2026 KEMENA PROGRESS</span></footer>
 
-  <div class="lightbox" id="lightbox" onclick="closeLightbox()"><button aria-label="Close image">×</button><img id="lightboxImage" alt="Enlarged project photograph"></div>
+  <div class="lightbox" id="lightbox" aria-modal="true" role="dialog" aria-label="Project photo viewer">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Close image">×</button>
+    <button class="lightbox-nav lightbox-prev" id="lightboxPrev" aria-label="Previous image">‹</button>
+    <figure><img id="lightboxImage" alt="Enlarged project photograph"><figcaption id="lightboxCaption"></figcaption></figure>
+    <button class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="Next image">›</button>
+    <div class="lightbox-counter" id="lightboxCounter"></div>
+  </div>
+  </div>
   <script src="script.js"></script>
 </body>
 </html>
