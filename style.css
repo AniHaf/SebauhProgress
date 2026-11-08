@@ -100,3 +100,24 @@ body.presentation-mode .project-description,.presentation-mode .timeline-content
  .lightbox figure{max-width:100%;max-height:82vh}
  .lightbox figure img{max-height:70vh}
 }
+
+/* Documentation library */
+.documentation-section{padding:76px max(7vw,24px) 88px;background:#f4f8fa;border-top:1px solid #e2ebef}
+.documentation-section .section-heading{margin-bottom:18px}
+.documentation-group{background:#fff;border:1px solid #e0e9ed;border-radius:9px;padding:26px;margin-top:24px;box-shadow:0 5px 20px rgba(25,58,76,.045)}
+.documentation-group-heading{display:flex;justify-content:space-between;align-items:center;gap:18px;padding-bottom:18px;border-bottom:1px solid #e8eef1}
+.archive-kicker{font-size:10px;font-weight:800;letter-spacing:1.5px;color:#1680a0}
+.documentation-group-heading h3{font-size:21px;line-height:1.35;color:#19394c;margin:7px 0 0}
+.archive-count{font-size:10px;font-weight:800;letter-spacing:1px;color:#527080;background:#edf4f7;border-radius:20px;padding:8px 11px;white-space:nowrap}
+.documentation-subgroup{padding-top:20px}
+.documentation-subgroup h4{font-size:15px;color:#25485b;margin:0 0 12px}
+.archive-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.archive-document{display:flex;align-items:center;gap:12px;padding:13px 14px;border:1px solid #e3ebef;border-radius:6px;text-decoration:none;background:#fff;transition:.18s ease;min-width:0}
+.archive-document:hover{border-color:#8bb8c8;background:#f7fbfc;transform:translateY(-1px)}
+.archive-filetype{flex:0 0 38px;height:38px;border-radius:5px;background:#eaf3f7;color:#126e8d;display:grid;place-items:center;font-size:10px;font-weight:900}
+.archive-doc-copy{display:flex;flex-direction:column;gap:4px;min-width:0;flex:1}
+.archive-doc-copy strong{font-size:13px;line-height:1.4;color:#203f52}
+.archive-doc-copy small{font-size:11px;line-height:1.45;color:#788b95}
+.archive-open{font-size:11px;font-weight:800;color:#147a9a;white-space:nowrap}
+.archive-note{font-size:11px;color:#748791;margin:12px 0 0}
+@media(max-width:760px){.archive-grid{grid-template-columns:1fr}.documentation-group{padding:18px}.documentation-group-heading{align-items:flex-start;flex-direction:column}.documentation-section{padding:54px 20px}}
